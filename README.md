@@ -34,10 +34,7 @@ Deploying the model on the ZARA online store to improve the accuracy of stock ma
 
 
 ## Team Members: 
-Elsa Figueroa
-
-Gauri Gupta
-
-Miga Budaasuren
-
+Elsa Figueroa<br>
+Gauri Gupta<br>
+Miga Budaasuren<br>
 Termeh Mohebbie
