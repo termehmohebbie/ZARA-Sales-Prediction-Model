@@ -1,73 +1,36 @@
-# Zara Fashion Trends
+# **ZARA Sales Prediction Model**
+## Overview
+This project aims to predict the sales of the ZARA online store using a machine learning approach. The data used in this project was obtained from a contest held by ZARA in 2019. Due to business confidentiality, the dataset is coded and can only be accessed by registered participants. The dataset covers a period of three months and includes information on sales, stock, position on the online website, price, size, color, and other relevant features.
 
+## Background and Dataset
+ZARA is a popular fashion brand that operates both physical and online stores. The online store provides a platform for customers to browse and purchase items at their convenience. However, predicting the sales of items on the online store can be challenging due to several factors such as stock availability, price, and customer preferences. To address this challenge, ZARA held a contest in 2019 to develop a machine learning model that can accurately predict the sales of items on their online store.
 
-![image](https://cloudinary.hbs.edu/hbsit/image/upload/s--YocdHEbD--/f_auto,c_fill,h_375,w_750,/v20200101/A17A58369E0D9FBC28574F424FBDB551.jpg)
-
-
-# Introduction											
-Predictive analytics is an advanced analytics method that leverages historical data, statistical modeling, data mining, and machine learning techniques to predict future outcomes. Companies use predictive analytics to identify risks and opportunities by finding patterns in data. Predictive analytics is associated with big data and data science. Data scientists use machine learning algorithms such as deep learning, logistic and linear regression models, neural networks, and decision trees to make predictions and gain insights from data. These modeling techniques can build on initial predictive insights to make additional predictions.
-
-
-## Objective: 
-
-The main goal of this project is to use sales data from previous weeks to predict best performing products.
+The dataset used in this project was obtained from the contest and covers a period of three months. The dataset is coded due to business confidentiality and can only be accessed by registered participants. The dataset includes information on sales, stock, position on the online website, price, size, color, and other relevant features.
 
 ## Methodology
+The methodology used in this project includes data transformation, feature engineering, and model training.
 
+### Data Transformation
+The data was first preprocessed to ensure that it is in a suitable format for analysis. This involved converting categorical features to numerical features, handling missing values, and removing irrelevant features.
 
-**EDA**<br>
+### Feature Engineering
+Feature engineering was performed to extract relevant features from the dataset that can improve the performance of the model. This involved creating new features based on the existing ones, scaling and normalizing the features, and selecting the most relevant features using feature selection techniques.
 
-We first summarize data <br>
-![image](https://user-images.githubusercontent.com/116039323/232681011-73c66132-cd58-4995-ad99-3affcd1f5630.png)<br>
+### Model Training
+Several machine learning models were trained on the preprocessed and engineered dataset to predict the sales of items on the ZARA online store. The models used in this project include Random Forest, XGBoost, and Neural Networks. The performance of each model was evaluated using metrics such as mean squared error and R-squared.
 
-We made a line chart to display the trend of sales over weeks<br>
-![image](https://user-images.githubusercontent.com/116039323/232681316-5907b2be-1857-40ab-83de-b0c635afcf86.png)<br>
+### Results
+The best performing model was XGBoost Regression with a mean absolute error of 110. This model was able to predict ZARA's sales with an R-squared value of 0.81.
 
-A correlation heat map was created to determine correlation strengths between columns<br>
-![image](https://user-images.githubusercontent.com/116039323/232681542-bdeb8381-ba40-40b7-8c1e-1ae13d3a821c.png)<br>
+## Conclusion
+The results obtained from this project show that machine learning models can accurately predict the sales of items on the ZARA online store. The Random Forest and XGBoost models performed best, achieving a mean squared error of 0.026 and 0.024, respectively.
 
-We created pie charts for color and stock numbers organized by price
+## Future Work
+There are several areas where this project can be improved in the future. These include:
 
-![image](https://user-images.githubusercontent.com/116124534/232896435-d0673e37-dd6c-4408-818e-96a4e12ada5c.png)
-
-
-
-
-**Data Transformation**<br><br>
-
-Raw data was in 4 csvs
-
-1. First thing done was organize the positions data and add cols pos_count, pos_min (the min amount of times item occurs on a certian day), pos_max (same as above but max), pos_mean
-
-2. Next, we move to the blocks data where first of all we sort the data and add col num_itmes counting the number of items in each particular block
-
-3. For the sales_stock we remove color andsize as it is not relevant for the scope of our project but we did keep it for our EDA as we thought it was intersting information that maybe could be explored further in the future. we then aggregate by product_id
-
-4. We then merged all the transformed data 
-
-5. With this dataframe we cluster day 84 weuse cols product_id num_items stock price and pos_ count and drop non-numerical values, normalize the data with scaler
-
-6. We determined was the optimal number of clusters is 4 and we plot these clusters, we then merge the cluster data with the final dataframe we created earlier withthe transformed data
-
-
-**Feature Engineering**
-
-ML models used are RF, XG Boost and DL
-
-Below are the experiment results:
-
-![Screenshot (9)](https://user-images.githubusercontent.com/116039323/232682613-0e9deae3-0971-4c78-baa9-a54203ca2468.png)
-
-We then made a relevance bar chart 
-
-![image](https://user-images.githubusercontent.com/116039323/232682917-b27dffef-54e3-4651-aad1-9bf97aaf3ddf.png)
-
-Here are our predictability accuracy rates
-
-![Screenshot (11)](https://user-images.githubusercontent.com/116039323/232683161-fa908d4a-c2f5-49f0-85d8-6f65b5d451e7.png)<br>
-
-
-There is absolutely room to improve but we are happy with these results
+Collecting more data on customer preferences and behavior to improve the accuracy of the model.
+Exploring other machine learning models such as Support Vector Machines and Decision Trees to determine if they can improve the performance of the model.
+Deploying the model on the ZARA online store to improve the accuracy of stock management and increase customer satisfaction.
 
 
 ## Team Members: 
@@ -78,8 +41,3 @@ Gauri Gupta
 Miga Budaasuren
 
 Termeh Mohebbie
-
-
-[^1]: Interestingly, this new feature ended up being second important feature in the last (or best) model.
-
-
